@@ -44,10 +44,9 @@ public class Program {
            // b.lines().forEach(line -> System.out.println(line));
 
             //System.out.println(i.read());
-            //System.out.println(i.read());
+
 
             int counter;
-            int count2;
             char c;
 
             while((counter = i.read()) != -1) {
@@ -67,7 +66,6 @@ public class Program {
 
 
 
-                Output.close();
 
 
             }
@@ -77,6 +75,7 @@ public class Program {
 
             System.out.println("Innerinner");
 
+            Output.close();
 
         }
 
