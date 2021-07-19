@@ -33,7 +33,7 @@ public class parserFile
         binaryTreePosition = 0;
 
         try {
-            Output = new FileWriter("parserOutput.txt", true);
+            Output = new FileWriter("newestParserOutput2.txt", true);
         }
         catch (IOException e)
         {
@@ -236,20 +236,22 @@ public class parserFile
         for(Map.Entry m:binaryTree.entrySet())
         {
            // System.out.println("Key:"+m.getKey() + " Value:"+m.getValue());
-            try {
-              //  Output.write("Key:"+m.getKey() + " Value:"+m.getValue()+"\n");
-                Output.write("");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
+            for (int count = 0; count < 1; count++) {
+               try {
+                      Output.write("Key:"+m.getKey() + " Value:"+m.getValue()+"\n");
+                      break;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         System.out.println("--------BINARY TREE END-----------");
-        try {
+       try {
             Output.close();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+          }
 
     }
 

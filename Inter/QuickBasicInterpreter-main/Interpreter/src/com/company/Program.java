@@ -2,23 +2,14 @@ package com.company;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 public class Program {
 
 
     FileWriter Output;
 
-   /* public void load () {               //reads statements from an input stream and
-        //parses them into a collection of statements
-
-
-        String fileName = "src//parserOutPut.txt";
-
-        try {
-            InputStream fis = new FileInputStream(fileName);
-            InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
-            BufferedReader br = new BufferedReader(isr);
-        }
+   /*
         catch {
             (br.lines().forEach(line -> System.out.println(line)));
 
@@ -38,12 +29,12 @@ public class Program {
         //parses them into a collection of statements
 
 
-        String fileName = "C:\\Users\\Cline\\Downloads\\Inter\\parserOutput.txt";
+        String fileName = "C:\\Users\\Cline\\Downloads\\Inter\\newestParserOutput.txt";
 
         System.out.println("Inner");
 
         try {
-            Output = new FileWriter("ProgramOutput.txt", true);
+            Output = new FileWriter("ProgramOut.txt", true);
 
 
             InputStream f = new FileInputStream(fileName);
@@ -56,6 +47,7 @@ public class Program {
             //System.out.println(i.read());
 
             int counter;
+            int count2;
             char c;
 
             while((counter = i.read()) != -1) {
@@ -63,17 +55,23 @@ public class Program {
                 // converts integer to character
                  c = (char)counter;
 
+
                 // prints character
-              System.out.print(c);
+             System.out.print(c);
                 Output.write(c);
 
-            //    if(Output){
 
-              //  }
+
+
+
+
+
+
+                Output.close();
+
 
             }
 
-      //      System.out.print(c);
 
 
 
@@ -94,11 +92,11 @@ public class Program {
 
 
 
-            try {
-                Output.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+   //         try {
+     //           Output.close();
+       //     } catch (IOException e) {
+         //       e.printStackTrace();
+           // }
 
 
 
