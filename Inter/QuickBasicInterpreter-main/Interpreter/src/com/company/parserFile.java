@@ -1,5 +1,4 @@
 package com.company;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ public class parserFile
         binaryTreePosition = 0;
 
         try {
-            Output = new FileWriter("parserOutPut.txt", true);
+            Output = new FileWriter("parserOutput.txt", true);
         }
         catch (IOException e)
         {
@@ -119,7 +118,6 @@ public class parserFile
                 }
 
 
-
                 //endregion
 
                 for (int x = 0; x < lineNumbers.size(); x++)
@@ -187,57 +185,47 @@ public class parserFile
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("END"))
-                {
+                else if(currentToken.equals("END")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("("))
-                {
+                else if(currentToken.equals("(")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals(")"))
-                {
+                else if(currentToken.equals(")")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("EXP"))
-                {
-
+                else if(currentToken.equals("EXP")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("SQR"))
-                {
+                else if(currentToken.equals("SQR")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("^"))
-                {
+                else if(currentToken.equals("^")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("-"))
-                {
+                else if(currentToken.equals("-")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("/"))
-                {
+                else if(currentToken.equals("/")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
                 }
-                else if(currentToken.equals("INT"))
-                {
+                else if(currentToken.equals("INT")) {
                     binaryTree.put(binaryTreePosition++, currentToken);
                     currentToken = getNextToken();
                     break;
@@ -247,12 +235,14 @@ public class parserFile
 
         for(Map.Entry m:binaryTree.entrySet())
         {
-            System.out.println("Key:"+m.getKey() + " Value:"+m.getValue());
+           // System.out.println("Key:"+m.getKey() + " Value:"+m.getValue());
             try {
-                Output.write("Key:"+m.getKey() + " Value:"+m.getValue()+"\n");
+              //  Output.write("Key:"+m.getKey() + " Value:"+m.getValue()+"\n");
+                Output.write("");
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
         System.out.println("--------BINARY TREE END-----------");
         try {
@@ -314,8 +304,9 @@ public class parserFile
        return false;
    }
 
-{
+    public TreeMap<Integer, String>  getBinaryTree(){
+        return binaryTree;
+      }
 
-}
 
 }

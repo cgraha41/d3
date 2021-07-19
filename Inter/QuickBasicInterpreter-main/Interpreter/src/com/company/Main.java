@@ -15,6 +15,7 @@ public class Main {
         lexer.readFile();
         try {
             lexer.createTokens();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

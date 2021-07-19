@@ -14,6 +14,7 @@ public class BinaryTree {
     {
 
     }
+
     public String get( String key )
     {
         if (this.key.equals(key))
