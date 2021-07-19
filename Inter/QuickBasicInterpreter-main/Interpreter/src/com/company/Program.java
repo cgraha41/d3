@@ -47,22 +47,37 @@ public class Program {
 
 
             int counter;
+            int counter3 = 0;
             char c;
+            String current = "";
+            String current2 = "";
 
-            while((counter = i.read()) != -1) {
-
-                // converts integer to character
-                 c = (char)counter;
-
-
-                // prints character
-             System.out.print(c);
-                Output.write(c);
+           while((counter = i.read()) != -1) {
 
 
 
 
+                    // converts integer to character
+                    c = (char) counter;
 
+
+                    // prints character
+               //System.out.print(c);
+
+
+
+               current = current.replace("Key:", " ");
+               current = current.replace("Value:", " ");
+
+       //   if (counter3 < 35){
+                   System.out.print(current);
+              // }
+
+          counter3++;
+
+          //      Output.write(c);
+
+                    current = current + c;
 
 
 
