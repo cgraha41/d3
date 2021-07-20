@@ -337,6 +337,19 @@ public class Program {
 
                }
 
+               if (current.contains("*")){
+                   //System.out.println(" = true");
+
+                   current = "'*'";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
           //      Output.write(c);
 
    //                 current = current + c;
@@ -346,9 +359,7 @@ public class Program {
                    //System.out.println(" = true");
 
                    current = "INT";
-     //              sentences.add(sentence);
 
-      //             sentence = "";
                    sentence = sentence + current;
                    System.out.print(sentences);
                    System.out.println();
@@ -358,7 +369,7 @@ public class Program {
                }
 
 
-               if (current.contains("PR")){
+               if (current.contains("PRI")){
                    System.out.println("PRINT true");
 
                    current = "PRINT ";
