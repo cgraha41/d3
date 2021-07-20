@@ -43,6 +43,7 @@ public class Program {
 
 
             int counter;
+            int counter2 = 0;
             char c;
             String current = "";
             String sentence = "";
@@ -75,14 +76,17 @@ public class Program {
                if (current.contains("LET") == true){
                 //   System.out.println("LET true");
 
-                   current = "LET ";
 
-                   sentences.add(sentence);
+                       current = "LET ";
+                   if (counter2 != 0) {
+
+                       sentences.add(sentence);
+                   }
                    sentence = "";
                    sentence = sentence + current;
                   System.out.print(sentences);
               //     System.out.println();
-
+                   counter2++;
 //                       System.out.print(current);
 
                    current = "";
@@ -100,14 +104,245 @@ public class Program {
                    current = "X";
                    sentence = sentence + current;
 
-                 System.out.println();
-              //     System.out.println("sentence: " + sentence);
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
                    //System.out.print(current);
-                  current = "";
+                   current = "";
 
                }
-//               System.out.print(current);
 
+               if (current.contains("Y") == true){
+                   //System.out.println(" = true");
+
+                   current = "Y";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+               if (current.contains("=") == true){
+                   //System.out.println(" = true");
+
+                   current = " = ";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+               if (current.contains("Value:1") == true){
+                   //System.out.println(" = true");
+
+                   current = "1";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:2") == true){
+                   //System.out.println(" = true");
+
+                   current = "2";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:3") == true){
+                   //System.out.println(" = true");
+
+                   current = "3";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:4") == true){
+                   //System.out.println(" = true");
+
+                   current = "4";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:5") == true){
+                   //System.out.println(" = true");
+
+                   current = "5";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:6") == true){
+                   //System.out.println(" = true");
+
+                   current = "6";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:7") == true){
+                   //System.out.println(" = true");
+
+                   current = "7";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:8") == true){
+                   //System.out.println(" = true");
+
+                   current = "8";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               } if (current.contains("Value:9") == true){
+                   //System.out.println(" = true");
+
+                   current = "9";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+               if (current.contains("Value:0") == true){
+                   //System.out.println(" = true");
+
+                   current = "0";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+               if (current.contains("0") == true){
+                   //System.out.println(" = true");
+
+                   current = "0";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+
+
+               if (current.contains("Value:EXP") == true){
+                   //System.out.println(" = true");
+
+                   current = " EXP";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+
+               if (current.contains("Value:(") == true){
+                   //System.out.println(" = true");
+
+                   current = "(";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+               if (current.contains("Value:)") == true){
+                   //System.out.println(" = true");
+
+                   current = ")";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+               if (current.contains("Value:-") == true){
+                   //System.out.println(" = true");
+
+                   current = "-";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+               if (current.contains("^") == true){
+                   //System.out.println(" = true");
+
+                   current = "^";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
+
+               if (current.contains("/") == true){
+                   //System.out.println(" = true");
+
+                   current = "/";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+               }
 
           //      Output.write(c);
 
@@ -116,8 +351,46 @@ public class Program {
 
 
 
+               if (current.contains("INT") == true){
+                   //System.out.println(" = true");
 
-            }
+                   current = "INT";
+                   sentences.add(sentence);
+
+                   sentence = "";
+                   sentence = sentence + current;
+                   System.out.print(sentences);
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+
+
+               }
+
+
+               if (current.contains("INT") == true){
+                   //System.out.println(" = true");
+
+                   current = "INT";
+                   sentences.add(sentence);
+
+                   sentence = "";
+                   sentence = sentence + current;
+                   System.out.print(sentences);
+                   System.out.println();
+                   //     System.out.println("sentence: " + sentence);
+                   //System.out.print(current);
+                   current = "";
+
+
+
+               }
+
+
+
+           }
 
 
 
