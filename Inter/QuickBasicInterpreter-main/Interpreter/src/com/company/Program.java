@@ -31,6 +31,7 @@ public class Program {
 
         try {
             Output = new FileWriter("ProgramOut.txt", true);
+//            Output = new FileWriter("ProgramOutRealArray.txt", true);
 
 
             InputStream f = new FileInputStream(fileName);
@@ -220,52 +221,44 @@ public class Program {
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
-               } if (current.contains("Value:9") == true){
+               } if (current.contains("Value:9")){
                    //System.out.println(" = true");
 
                    current = "9";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                }
 
-               if (current.contains("Value:0") == true){
+               if (current.contains("Value:0")){
                    //System.out.println(" = true");
 
                    current = "0";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                }
 
-               if (current.contains("0") == true){
+               if (current.contains("0")){
                    //System.out.println(" = true");
 
                    current = "0";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                }
 
 
 
-               if (current.contains("Value:EXP") == true){
+               if (current.contains("Value:EXP")){
                    //System.out.println(" = true");
 
                    current = " EXP";
@@ -279,7 +272,7 @@ public class Program {
                }
 
 
-               if (current.contains("Value:(") == true){
+               if (current.contains("Value:(")){
                    //System.out.println(" = true");
 
                    current = "(";
@@ -292,7 +285,7 @@ public class Program {
 
                }
 
-               if (current.contains("Value:)") == true){
+               if (current.contains("Value:)")){
                    //System.out.println(" = true");
 
                    current = ")";
@@ -305,7 +298,7 @@ public class Program {
 
                }
 
-               if (current.contains("Value:-") == true){
+               if (current.contains("Value:-")){
                    //System.out.println(" = true");
 
                    current = "-";
@@ -318,7 +311,7 @@ public class Program {
 
                }
 
-               if (current.contains("^") == true){
+               if (current.contains("^")){
                    //System.out.println(" = true");
 
                    current = "^";
@@ -331,7 +324,7 @@ public class Program {
 
                }
 
-               if (current.contains("/") == true){
+               if (current.contains("/")){
                    //System.out.println(" = true");
 
                    current = "/";
@@ -346,48 +339,79 @@ public class Program {
 
           //      Output.write(c);
 
-                    current = current + c;
+   //                 current = current + c;
 
 
-
-
-               if (current.contains("INT") == true){
+               if (current.contains("INT")){
                    //System.out.println(" = true");
 
                    current = "INT";
-                   sentences.add(sentence);
+     //              sentences.add(sentence);
 
-                   sentence = "";
+      //             sentence = "";
                    sentence = sentence + current;
                    System.out.print(sentences);
                    System.out.println();
                    //     System.out.println("sentence: " + sentence);
                    //System.out.print(current);
                    current = "";
-
-
-
                }
 
 
-               if (current.contains("INT") == true){
-                   //System.out.println(" = true");
+               if (current.contains("PR")){
+                   System.out.println("PRINT true");
 
-                   current = "INT";
+                   current = "PRINT ";
                    sentences.add(sentence);
-
                    sentence = "";
                    sentence = sentence + current;
                    System.out.print(sentences);
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
+                   counter2++;
+//                       System.out.print(current);
+
                    current = "";
-
-
 
                }
 
+
+               if (current.contains("NEXT")){
+                   System.out.println("NEXT true");
+
+                   current = "NEXT ";
+                   sentences.add(sentence);
+                   sentence = "";
+                   sentence = sentence + current;
+                   System.out.print(sentences);
+                   System.out.println();
+                   counter2++;
+//                       System.out.print(current);
+
+                   current = "";
+
+               }
+
+
+               if (current.contains("END")){
+                   System.out.println("END true");
+
+                   current = "END ";
+                   sentences.add(sentence);
+                   sentence = "";
+                   sentence = sentence + current;
+                   System.out.print(sentences);
+                   System.out.println();
+                   counter2++;
+//                       System.out.print(current);
+
+                   current = "";
+
+                         Output.write(String.valueOf(sentences));
+
+               }
+
+
+               current = current + c;
 
 
            }
@@ -395,7 +419,7 @@ public class Program {
 
 
 
-            System.out.println("Innerinner");
+          //  System.out.println("Innerinner");
 
             Output.close();
 

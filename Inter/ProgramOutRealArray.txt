@@ -1,0 +1,1 @@
+[LET X = 2, LET Y =  EXP(-0(X^2/2))/0(2), LET Y = INT(100Y0), PRINT INT, NEXT X]
