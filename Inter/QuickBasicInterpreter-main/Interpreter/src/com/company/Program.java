@@ -63,10 +63,6 @@ public class Program {
                //System.out.print(c);
 
 
-         //      current = current.replace("e", " ");
-
-           //    current = current.replace("y:", " ");
-             //  current = current.replace("Value:", " ");
 
              /*  if (current.contains("K") == true){
                    System.out.println("true");
@@ -256,6 +252,16 @@ public class Program {
 
                }
 
+               if (current.contains("Key:21")){
+                   //System.out.println(" = true");
+
+                   current = "SQR (23.14159265)";
+                   sentence = sentence + current;
+
+                   System.out.println();
+                   current = "";
+
+               }
 
 
                if (current.contains("Value:EXP")){
