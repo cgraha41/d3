@@ -75,13 +75,13 @@ public class Program {
                if (current.contains("LET") == true){
                 //   System.out.println("LET true");
 
-                   current = "LET";
+                   current = "LET ";
 
                    sentences.add(sentence);
                    sentence = "";
                    sentence = sentence + current;
-                //   System.out.print(sentences);
-                   System.out.println();
+                  System.out.print(sentences);
+              //     System.out.println();
 
 //                       System.out.print(current);
 
@@ -94,15 +94,15 @@ public class Program {
            //    System.out.print(current);
 
 
-               if (current.contains("=") == true){
+               if (current.contains("Value:X") == true){
                    //System.out.println(" = true");
 
-
+                   current = "X";
                    sentence = sentence + current;
 
                  System.out.println();
               //     System.out.println("sentence: " + sentence);
-                   System.out.print(current);
+                   //System.out.print(current);
                   current = "";
 
                }
