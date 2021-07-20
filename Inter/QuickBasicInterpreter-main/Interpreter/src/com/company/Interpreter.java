@@ -61,6 +61,7 @@ public class Interpreter {
 
         Program pro = new Program();
         pro.load();
+        //pro.run();
     }
 
 
