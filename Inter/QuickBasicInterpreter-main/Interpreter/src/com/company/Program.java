@@ -10,19 +10,15 @@ public class Program {
     FileWriter Output;
 
    /*
-        catch {
-            (br.lines().forEach(line -> System.out.println(line)));
 
-        }
-    }
+
     public void run (){             //iterates over the collection and executes each of the statements
 
     }
-
-
-
 }
 */
+
+
 
 
     public void load() {               //reads statements from an input stream and
@@ -47,10 +43,10 @@ public class Program {
 
 
             int counter;
-            int counter3 = 0;
             char c;
             String current = "";
-            String current2 = "";
+            String sentence = "";
+            ArrayList<String> sentences = new ArrayList<>();
 
            while((counter = i.read()) != -1) {
 
@@ -65,15 +61,53 @@ public class Program {
                //System.out.print(c);
 
 
+         //      current = current.replace("e", " ");
 
-               current = current.replace("Key:", " ");
-               current = current.replace("Value:", " ");
+           //    current = current.replace("y:", " ");
+             //  current = current.replace("Value:", " ");
 
-       //   if (counter3 < 35){
+             /*  if (current.contains("K") == true){
+                   System.out.println("true");
+                   current = current.replace("K", " ");
+
+               }*/
+
+               if (current.contains("LET") == true){
+                //   System.out.println("LET true");
+
+                   current = "LET";
+
+                   sentences.add(sentence);
+                   sentence = "";
+                   sentence = sentence + current;
+                //   System.out.print(sentences);
+                   System.out.println();
+
+//                       System.out.print(current);
+
+                   current = "";
+
+               }
+
+
+
+           //    System.out.print(current);
+
+
+               if (current.contains("=") == true){
+                   //System.out.println(" = true");
+
+
+                   sentence = sentence + current;
+
+                 System.out.println();
+              //     System.out.println("sentence: " + sentence);
                    System.out.print(current);
-              // }
+                  current = "";
 
-          counter3++;
+               }
+//               System.out.print(current);
+
 
           //      Output.write(c);
 
