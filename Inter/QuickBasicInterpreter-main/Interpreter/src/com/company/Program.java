@@ -25,7 +25,7 @@ public class Program {
         //parses them into a collection of statements
 
 
-        String fileName = "C:\\Users\\Cline\\Downloads\\Inter\\newestParserOutput.txt";
+        String fileName = "C:\\Users\\Cline\\Downloads\\Inter\\parserOutput.txt";
 
         System.out.println("Inner");
 

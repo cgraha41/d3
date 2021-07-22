@@ -1,6 +1,9 @@
 package com.company;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.*;
 import java.io.FileNotFoundException;
@@ -33,7 +36,12 @@ public class parserFile
         binaryTreePosition = 0;
 
         try {
-            Output = new FileWriter("newestParserOutput2.txt", true);
+            Files.deleteIfExists(Paths.get("parserOutput.txt"));
+            Output = new FileWriter("parserOutput.txt", true);
+        }
+
+        catch (NoSuchFileException e) {
+            System.out.println("No such file/directory exists");
         }
         catch (IOException e)
         {
