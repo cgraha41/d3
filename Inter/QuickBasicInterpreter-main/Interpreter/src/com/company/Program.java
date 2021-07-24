@@ -9,15 +9,7 @@ public class Program {
 
     FileWriter Output;
 
-   /*
-
-
-    public void run (){             //iterates over the collection and executes each of the statements
-
-    }
-}
-*/
-
+    ArrayList<String> sentences = new ArrayList<>();
 
 
 
@@ -27,20 +19,17 @@ public class Program {
 
         String fileName = "C:\\Users\\Cline\\Downloads\\Inter\\parserOutput.txt";
 
-        System.out.println("Inner");
+        //System.out.println("Inner");
 
         try {
             Output = new FileWriter("ProgramOut.txt", true);
-//            Output = new FileWriter("ProgramOutRealArray.txt", true);
 
 
             InputStream f = new FileInputStream(fileName);
             InputStreamReader i = new InputStreamReader(f, StandardCharsets.UTF_8);
-            BufferedReader b = new BufferedReader(i);
 
-           // b.lines().forEach(line -> System.out.println(line));
-
-            //System.out.println(i.read());
+            //  BufferedReader b = new BufferedReader(i);
+            // b.lines().forEach(line -> System.out.println(line));
 
 
             int counter;
@@ -48,27 +37,17 @@ public class Program {
             char c;
             String current = "";
             String sentence = "";
-            ArrayList<String> sentences = new ArrayList<>();
+        //    ArrayList<String> sentences = new ArrayList<>();
 
            while((counter = i.read()) != -1) {
 
 
-
-
-                    // converts integer to character
                     c = (char) counter;
 
 
-                    // prints character
                //System.out.print(c);
 
 
-
-             /*  if (current.contains("K") == true){
-                   System.out.println("true");
-                   current = current.replace("K", " ");
-
-               }*/
 
                if (current.contains("LET") == true){
                 //   System.out.println("LET true");
@@ -134,84 +113,62 @@ public class Program {
                }
 
                if (current.contains("Value:1") == true){
-                   //System.out.println(" = true");
 
                    current = "1";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                } if (current.contains("Value:2") == true){
-                   //System.out.println(" = true");
 
                    current = "2";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                } if (current.contains("Value:3") == true){
-                   //System.out.println(" = true");
 
                    current = "3";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                } if (current.contains("Value:4") == true){
-                   //System.out.println(" = true");
 
                    current = "4";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                } if (current.contains("Value:5") == true){
-                   //System.out.println(" = true");
 
                    current = "5";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                } if (current.contains("Value:6") == true){
-                   //System.out.println(" = true");
 
                    current = "6";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                } if (current.contains("Value:7") == true){
-                   //System.out.println(" = true");
 
                    current = "7";
                    sentence = sentence + current;
 
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
 
                } if (current.contains("Value:8") == true){
-                   //System.out.println(" = true");
 
                    current = "8";
                    sentence = sentence + current;
@@ -220,7 +177,6 @@ public class Program {
                    current = "";
 
                } if (current.contains("Value:9")){
-                   //System.out.println(" = true");
 
                    current = "9";
                    sentence = sentence + current;
@@ -230,16 +186,6 @@ public class Program {
 
                }
 
-               if (current.contains("Value:0")){
-                   //System.out.println(" = true");
-
-                   current = "0";
-                   sentence = sentence + current;
-
-                   System.out.println();
-                   current = "";
-
-               }
 
                if (current.contains("0")){
                    //System.out.println(" = true");
@@ -362,7 +308,7 @@ public class Program {
 
 
                if (current.contains("INT")){
-                   //System.out.println(" = true");
+                   //System.out.println("INT = true");
 
                    current = "INT";
 
@@ -435,9 +381,6 @@ public class Program {
 
 
 
-
-          //  System.out.println("Innerinner");
-
             Output.close();
 
         }
@@ -471,9 +414,14 @@ public class Program {
           //      f.close();
         //}
 
+    }
 
 
 
+    public void run (){             //iterates over the collection and executes each of the statements
+        System.out.println("");
+        System.out.println("Why are you RUNNING?");
+        System.out.print(sentences);
     }
 
 
