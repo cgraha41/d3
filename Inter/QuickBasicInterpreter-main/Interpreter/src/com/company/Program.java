@@ -110,35 +110,23 @@ public class Program {
                    current = "6";
                    sentence = sentence + current;
                    current = "";
-
                } if (current.contains("Value:7")){
                    current = "7";
                    sentence = sentence + current;
                    current = "";
-
                } if (current.contains("Value:8")){
                    current = "8";
                    sentence = sentence + current;
                    current = "";
-
                } if (current.contains("Value:9")){
-
                    current = "9";
                    sentence = sentence + current;
-
                    current = "";
-
                }
-
-
                if (current.contains("00")){
-                   //System.out.println(" = true");
-
                    current = "00";
                    sentence = sentence + current;
-
                    current = "";
-
                }
 
                if (current.contains("Key:21")){
@@ -164,7 +152,6 @@ public class Program {
                if (current.contains("Value:-")){
                    current = "-";
                    sentence = sentence + current;
-                   System.out.println();
                    current = "";
                }
                if (current.contains("^")){
@@ -255,11 +242,10 @@ public class Program {
         for (int counter = 0; counter < sentences.size(); counter++){
          //   System.out.print("RUN" + counter + ": ");
             current = sentences.get(counter);
-            System.out.println(current);
+         //   System.out.println(current);
 
 
             if (current.contains("LET")){
-
 
                 current = current.replace("LET", "");
                 System.out.println(current);
@@ -268,7 +254,7 @@ public class Program {
                     interpretation.add(current);
                     current = String.valueOf(current.charAt(current.length() - 1));
                     x = Integer.valueOf(current);
-                    System.out.println(x);
+                   // System.out.println(x);
                 }
 
                 if (current.contains("X^2")){
@@ -286,15 +272,38 @@ public class Program {
                     current = current.replace(")","");
 
                     if (current.contains("/2")){
-                       String[] temp = new String[2];
-                         temp = current.split("/2");
-                        System.out.println(temp[0]);
-                        System.out.println(temp[1]);
-                        current = Integer.valueOf(temp[0])/ 2 + temp[1];
+                        String[] temp = new String[2];
+                        temp = current.split("/2");
+                        temp[0] = temp[0].replace("-","");
+                        temp[0] = temp[0].replace(" ","");
+                        current = "-" + Integer.valueOf(temp[0])/2 + temp[1];
+                    }
+
+                    if (current.contains("SQR ")){
+                        String[] temp = new String[2];
+                        temp = current.split(" ");
+                        temp[0] = temp[0].replace("SQR","");
+                        temp[1] = (Math.sqrt(Double.valueOf(temp[1])) + "");
+                        current = temp[0] + "" + temp[1];
+                    }
+
+                    if (current.contains("/")){
+                        String[] temp = new String[2];
+                        temp = current.split("/");
+                        temp[0] = temp[0].replace("-","");
+                        current = " Y = -" + Double.valueOf(Integer.valueOf(temp[0]) / Double.valueOf(temp[1]));
                     }
 
 
-                   System.out.println(current);
+                    if (current.contains("INT")){
+                        double temp = Double.valueOf("3.5");
+                        int temp2 = (int)temp;
+                        System.out.println("temp2: " + temp2);
+                    }
+
+
+
+                    System.out.println(current);
 
               //      y = Integer.valueOf(current);
                //     System.out.println(y);
