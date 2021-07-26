@@ -240,7 +240,6 @@ public class Program {
 
 
         for (int counter = 0; counter < sentences.size(); counter++) {
-            //   System.out.print("RUN" + counter + ": ");
 
             try {
                 Files.deleteIfExists(Paths.get("ProgramFinalOut.txt"));
