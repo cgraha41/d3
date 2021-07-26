@@ -47,7 +47,7 @@ public class parserFile
         {
             System.out.println(e.getMessage());
         }
-        System.out.println("--------BINARY TREE-----------");
+       // System.out.println("--------BINARY TREE-----------");
     }
 
     public void createBinaryTree() {
@@ -254,7 +254,7 @@ public class parserFile
                 }
             }
         }
-        System.out.println("--------BINARY TREE END-----------");
+      //  System.out.println("--------BINARY TREE END-----------");
        try {
             Output.close();
         } catch (IOException e) {

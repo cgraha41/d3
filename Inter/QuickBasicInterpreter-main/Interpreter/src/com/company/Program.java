@@ -2,7 +2,9 @@ package com.company;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Program {
 
@@ -37,7 +39,6 @@ public class Program {
             char c;
             String current = "";
             String sentence = "";
-        //    ArrayList<String> sentences = new ArrayList<>();
 
            while((counter = i.read()) != -1) {
 
@@ -45,13 +46,8 @@ public class Program {
                     c = (char) counter;
 
 
-               //System.out.print(c);
-
-
 
                if (current.contains("LET") == true){
-                //   System.out.println("LET true");
-
 
                        current = "LET ";
                    if (counter2 != 0) {
@@ -60,120 +56,69 @@ public class Program {
                    }
                    sentence = "";
                    sentence = sentence + current;
-                  System.out.print(sentences);
-              //     System.out.println();
                    counter2++;
-//                       System.out.print(current);
 
                    current = "";
-
                }
 
 
 
-           //    System.out.print(current);
-
-
-               if (current.contains("Value:X") == true){
-                   //System.out.println(" = true");
-
+               if (current.contains("Value:X")){
                    current = "X";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
 
-               if (current.contains("Y") == true){
-                   //System.out.println(" = true");
-
+               if (current.contains("Y")){
                    current = "Y";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-               if (current.contains("=") == true){
-                   //System.out.println(" = true");
-
+               if (current.contains("=")){
                    current = " = ";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
 
-               if (current.contains("Value:1") == true){
+               if (current.contains("Value:1")){
 
                    current = "1";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
-               } if (current.contains("Value:2") == true){
-
+               } if (current.contains("Value:2")){
                    current = "2";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
-               } if (current.contains("Value:3") == true){
-
+               } if (current.contains("Value:3")){
                    current = "3";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
-               } if (current.contains("Value:4") == true){
-
+               } if (current.contains("Value:4")){
                    current = "4";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
-               } if (current.contains("Value:5") == true){
-
+               } if (current.contains("Value:5")){
                    current = "5";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
-               } if (current.contains("Value:6") == true){
-
+               } if (current.contains("Value:6")){
                    current = "6";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
-               } if (current.contains("Value:7") == true){
-
+               } if (current.contains("Value:7")){
                    current = "7";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
-               } if (current.contains("Value:8") == true){
-
+               } if (current.contains("Value:8")){
                    current = "8";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
 
                } if (current.contains("Value:9")){
@@ -181,195 +126,93 @@ public class Program {
                    current = "9";
                    sentence = sentence + current;
 
-                   System.out.println();
                    current = "";
 
                }
 
 
-               if (current.contains("0")){
+               if (current.contains("00")){
                    //System.out.println(" = true");
 
-                   current = "0";
+                   current = "00";
                    sentence = sentence + current;
 
-                   System.out.println();
                    current = "";
 
                }
 
                if (current.contains("Key:21")){
-                   //System.out.println(" = true");
-
                    current = "SQR (23.14159265)";
                    sentence = sentence + current;
-
-                   System.out.println();
                    current = "";
-
                }
-
-
                if (current.contains("Value:EXP")){
-                   //System.out.println(" = true");
-
                    current = " EXP";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-
-
                if (current.contains("Value:(")){
-                   //System.out.println(" = true");
-
                    current = "(";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-
                if (current.contains("Value:)")){
-                   //System.out.println(" = true");
-
                    current = ")";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-
                if (current.contains("Value:-")){
-                   //System.out.println(" = true");
-
                    current = "-";
                    sentence = sentence + current;
-
                    System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-
                if (current.contains("^")){
-                   //System.out.println(" = true");
-
                    current = "^";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-
                if (current.contains("/")){
-                   //System.out.println(" = true");
-
                    current = "/";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-
                if (current.contains("*")){
-                   //System.out.println(" = true");
-
                    current = "'*'";
                    sentence = sentence + current;
-
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
-
                }
-
-          //      Output.write(c);
-
-   //                 current = current + c;
-
-
                if (current.contains("INT")){
-                   //System.out.println("INT = true");
-
                    current = "INT";
-
                    sentence = sentence + current;
-                   System.out.print(sentences);
-                   System.out.println();
-                   //     System.out.println("sentence: " + sentence);
-                   //System.out.print(current);
                    current = "";
                }
-
-
                if (current.contains("PRI")){
-                   System.out.println("PRINT true");
-
                    current = "PRINT ";
                    sentences.add(sentence);
                    sentence = "";
                    sentence = sentence + current;
-                   System.out.print(sentences);
-                   System.out.println();
                    counter2++;
-//                       System.out.print(current);
-
                    current = "";
-
                }
-
-
                if (current.contains("NEXT")){
-                   System.out.println("NEXT true");
-
                    current = "NEXT ";
                    sentences.add(sentence);
                    sentence = "";
                    sentence = sentence + current;
-                   System.out.print(sentences);
-                   System.out.println();
                    counter2++;
-//                       System.out.print(current);
-
                    current = "";
-
                }
-
-
                if (current.contains("END")){
-                   System.out.println("END true");
-
                    current = "END ";
                    sentences.add(sentence);
                    sentence = "";
                    sentence = sentence + current;
-                   System.out.print(sentences);
-                   System.out.println();
                    counter2++;
-//                       System.out.print(current);
-
                    current = "";
 
-                         Output.write(String.valueOf(sentences));
+
+                   Output.write(String.valueOf(sentences));
 
                }
 
@@ -387,41 +230,90 @@ public class Program {
 
         catch(FileNotFoundException e){
             System.out.println("not found");
-
         }
 
         catch (IOException er){
             System.out.println("io");
-
-
-
-
-
-   //         try {
-     //           Output.close();
-       //     } catch (IOException e) {
-         //       e.printStackTrace();
-           // }
-
-
-
-
         }
-
-    //    finally {
-            // releases system resources associated with this stream
-      //      if(f!=null)
-          //      f.close();
-        //}
 
     }
 
 
 
     public void run (){             //iterates over the collection and executes each of the statements
-        System.out.println("");
-        System.out.println("Why are you RUNNING?");
-        System.out.print(sentences);
+
+
+        ArrayList<String> interpretation = new ArrayList<>();
+
+
+        String current = "";
+
+        int x=0;
+        double y=0;
+
+
+        for (int counter = 0; counter < sentences.size(); counter++){
+         //   System.out.print("RUN" + counter + ": ");
+            current = sentences.get(counter);
+            System.out.println(current);
+
+
+            if (current.contains("LET")){
+
+
+                current = current.replace("LET", "");
+                System.out.println(current);
+
+                if (current.contains("X = ")) {
+                    interpretation.add(current);
+                    current = String.valueOf(current.charAt(current.length() - 1));
+                    x = Integer.valueOf(current);
+                    System.out.println(x);
+                }
+
+                if (current.contains("X^2")){
+                    current = current.replace("X^2", String.valueOf(x * x));
+                }
+
+                if (current.contains("Y = ")) {
+                    interpretation.add(current);
+                    current = current.replace("Y = ", "");
+                    current = current.replace("EXP", "");
+
+
+
+                    current = current.replace("(","");
+                    current = current.replace(")","");
+
+                    if (current.contains("/2")){
+                       String[] temp = new String[2];
+                         temp = current.split("/2");
+                        System.out.println(temp[0]);
+                        System.out.println(temp[1]);
+                        current = Integer.valueOf(temp[0])/ 2 + temp[1];
+                    }
+
+
+                   System.out.println(current);
+
+              //      y = Integer.valueOf(current);
+               //     System.out.println(y);
+                }
+
+
+
+
+            }
+
+          //      System.out.println(interpretation);
+
+        }
+
+
+
+
+
+
     }
 
 
